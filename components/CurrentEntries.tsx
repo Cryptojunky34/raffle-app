@@ -1,6 +1,6 @@
 import { Card, Container, Spinner } from "@chakra-ui/react";
 import { useContract, useContractRead } from "@thirdweb-dev/react";
-import { LOTTERY_CONTRACT_ADDRESS } from "/const/addresses";
+import { LOTTERY_CONTRACT_ADDRESS } from "../const/addresses";
 import EntryCard from "./EntryCard";
 
 export default function CurrentEntries() {
