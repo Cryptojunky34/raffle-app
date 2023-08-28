@@ -1,13 +1,13 @@
 import { Box, Card, Input, Stack, Text } from "@chakra-ui/react";
 import LotteryStatus from "./Status";
 import { Web3Button, useContract, useContractRead } from "@thirdweb-dev/react";
-import { LOTTERY_CONTRACT_ADDRESS } from "../const/addresses";
+import { CONTRACT_ADDRESS } from "../const/addresses";
 import { useState } from "react";
 
 export default function AdminLotteryStatusCard() {
     const {
         contract
-    } = useContract(LOTTERY_CONTRACT_ADDRESS);
+    } = useContract(CONTRACT_ADDRESS);
 
     const {
         data: lotteryStatus
