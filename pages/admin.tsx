@@ -1,4 +1,4 @@
-mport { Box, Card, Container, Divider, Flex, Heading, Spinner, Stack, Text } from "@chakra-ui/react";
+import { Box, Card, Container, Divider, Flex, Heading, Spinner, Stack, Text } from "@chakra-ui/react";
 import AdminLotteryStatusCard from "../components/LotteryStatus";
 import AdminTicketPriceCard from "../components/TicketPrice";
 import AdminRaffleWinnerCard from "../components/RaffleWinner";
