@@ -1,6 +1,6 @@
 import { Card, Flex, Text } from "@chakra-ui/react";
 import { useContract, useContractRead } from "@thirdweb-dev/react";
-import { LOTTERY_CONTRACT_ADDRESS } from "../const/addresses";
+import { CONTRACT_ADDRESS } from "../const/addresses";
 
 type Props = {
     walletAddress: string;
@@ -9,7 +9,7 @@ type Props = {
 const EntryCard: React.FC<Props> = ({ walletAddress }) => {
     const {
         contract
-    } = useContract(LOTTERY_CONTRACT_ADDRESS);
+    } = useContract(CONTRACT_ADDRESS);
 
     const {
         data: numberOfEntries,
