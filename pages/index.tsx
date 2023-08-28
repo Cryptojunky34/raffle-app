@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { Box, Button, Container, Flex, Input, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { MediaRenderer, Web3Button, useAddress, useContract, useContractRead } from "@thirdweb-dev/react";
-import { HERO_IMAGE_URL, LOTTERY_CONTRACT_ADDRESS } from "../const/addresses";
+import { HERO_IMAGE_URL, CONTRACT_ADDRESS } from "../const/addresses";
 import LotteryStatus from "../components/Status";
 import { ethers } from "ethers";
 import PrizeNFT from "../components/PrizeNFT";
@@ -13,7 +13,7 @@ const Home: NextPage = () => {
 
   const {
     contract
-  } = useContract(LOTTERY_CONTRACT_ADDRESS);
+  } = useContract(CONTRACT_ADDRESS);
 
   const {
     data: lotteryStatus
@@ -89,7 +89,7 @@ const Home: NextPage = () => {
                 </Flex>
                 
                 <Web3Button
-                  contractAddress={LOTTERY_CONTRACT_ADDRESS}
+                  contractAddress={CONTRACT_ADDRESS}
                   action={(contract) => contract.call(
                     "buyTicket",
                     [
