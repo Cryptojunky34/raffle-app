@@ -6,13 +6,11 @@ import { ethers } from "ethers";
 export default function withdrawBalance() {
     const {
         contract
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     } = useContract(LOTTERY_CONTRACT_ADDRESS);
 
     const {
         data: contractBalance,
         isLoading: contractBalanceLoading
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     } = useContractRead(contract, "getBalance");
     
     return (
