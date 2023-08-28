@@ -3,7 +3,7 @@ import { Web3Button, useContract, useContractRead } from "@thirdweb-dev/react";
 import { LOTTERY_CONTRACT_ADDRESS } from "../const/addresses";
 import { ethers } from "ethers";
 
-export default function withdrawBalance() {
+export default function UsewithdrawBalance() {
     const {
         contract
     } = useContract(LOTTERY_CONTRACT_ADDRESS);
