@@ -1,11 +1,11 @@
 import { Box, Card, Heading, Spinner, Stack, Text } from "@chakra-ui/react";
 import { ThirdwebNftMedia, useContract, useContractMetadata, useContractRead, useNFT } from "@thirdweb-dev/react";
-import { LOTTERY_CONTRACT_ADDRESS } from "../const/addresses";
+import { CONTRACT_ADDRESS } from "../const/addresses";
 
 export default function PrizeNFT() {
     const {
         contract: lotteryContract
-    } = useContract(LOTTERY_CONTRACT_ADDRESS);
+    } = useContract(CONTRACT_ADDRESS);
 
     const {
         data: nftContractAddress
