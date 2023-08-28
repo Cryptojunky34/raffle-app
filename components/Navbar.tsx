@@ -2,7 +2,6 @@ import { Container, Flex, Text } from "@chakra-ui/react";
 import { ConnectWallet, useAddress, useContract, useContractRead } from "@thirdweb-dev/react";
 import Link from "next/link";
 import { LOTTERY_CONTRACT_ADDRESS } from "../const/addresses";
-
 export default function Navbar() {
     const address = useAddress();
 
