@@ -48,7 +48,7 @@ export default function AdminLotteryStatusCard() {
                     />
                 </Box>
                 <Web3Button
-                    contractAddress={LOTTERY_CONTRACT_ADDRESS}
+                    contractAddress={CONTRACT_ADDRESS}
                     action={(contract) => contract.call(
                         "startLottery",
                         [
@@ -62,7 +62,7 @@ export default function AdminLotteryStatusCard() {
             ) : (
                 <Stack spacing={4} mt={4}>
                     <Web3Button
-                        contractAddress={LOTTERY_CONTRACT_ADDRESS}
+                        contractAddress={CONTRACT_ADDRESS}
                         action={(contract) => contract.call(
                             "endLottery"
                         )}
