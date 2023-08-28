@@ -1,12 +1,12 @@
 import { Box, Card, Text } from "@chakra-ui/react";
 import { useContract, useContractRead } from "@thirdweb-dev/react";
-import { LOTTERY_CONTRACT_ADDRESS } from "../const/addresses";
+import { CONTRACT_ADDRESS } from "../const/addresses";
 import RaffleNFTTransfer from "./RaffleNFTTransfer";
 
 export default function AdminRaffleWinnerCard() {
     const {
         contract: lotteryContract
-    } = useContract(LOTTERY_CONTRACT_ADDRESS);
+    } = useContract(CONTRACT_ADDRESS);
 
     const {
         data: prizeNftContractAddress
