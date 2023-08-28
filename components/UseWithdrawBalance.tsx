@@ -1,12 +1,12 @@
 import { Box, Spinner, Text } from "@chakra-ui/react";
 import { Web3Button, useContract, useContractRead } from "@thirdweb-dev/react";
-import { LOTTERY_CONTRACT_ADDRESS } from "../const/addresses";
+import { CONTRACT_ADDRESS } from "../const/addresses";
 import { ethers } from "ethers";
 
 export default function UsewithdrawBalance() {
     const {
         contract
-    } = useContract(LOTTERY_CONTRACT_ADDRESS);
+    } = useContract(CONTRACT_ADDRESS);
 
     const {
         data: contractBalance,
@@ -24,7 +24,7 @@ export default function UsewithdrawBalance() {
                 )}
             </Box>
             <Web3Button
-                contractAddress={LOTTERY_CONTRACT_ADDRESS}
+                contractAddress={CONTRACT_ADDRESS}
                 action={(contract) => contract.call(
                     "withdrawBalance"
                 )}
