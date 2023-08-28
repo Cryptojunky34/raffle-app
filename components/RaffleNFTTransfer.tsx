@@ -1,6 +1,6 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { ThirdwebNftMedia, Web3Button, useContract, useContractMetadata, useContractRead, useNFT } from "@thirdweb-dev/react";
-import { LOTTERY_CONTRACT_ADDRESS } from "../const/addresses";
+import { CONTRACT_ADDRESS } from "../const/addresses";
 
 type Props = {
     contractAddress: string;
@@ -10,7 +10,7 @@ type Props = {
 const RaffleNFTTransfer: React.FC<Props> = ({ contractAddress, tokenId }) => {
     const {
         contract: lotteryContract
-    } = useContract(LOTTERY_CONTRACT_ADDRESS);
+    } = useContract(CONTRACT_ADDRESS);
 
     const {
         data: lotteryStatus
@@ -42,10 +42,10 @@ const RaffleNFTTransfer: React.FC<Props> = ({ contractAddress, tokenId }) => {
             </Box>
         </Flex>
         <Web3Button
-            contractAddress={LOTTERY_CONTRACT_ADDRESS}
+            contractAddress={CONTRACT_ADDRESS}
             action={async () => {
                 await prizeNftContract?.setApprovalForToken(
-                    LOTTERY_CONTRACT_ADDRESS,
+                    CONTRACT_ADDRESS,
                     tokenId
                 );
 
