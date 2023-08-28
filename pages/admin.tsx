@@ -1,7 +1,4 @@
-import { Box, Card, Container, Divider, Flex, Heading, Spinner, Stack, Text } from "@chakra-ui/react";
-import { Web3Button, useContract, useContractRead } from "@thirdweb-dev/react";
-import { LOTTERY_CONTRACT_ADDRESS } from "../const/addresses";
-import { ethers } from "ethers";
+mport { Box, Card, Container, Divider, Flex, Heading, Spinner, Stack, Text } from "@chakra-ui/react";
 import AdminLotteryStatusCard from "../components/LotteryStatus";
 import AdminTicketPriceCard from "../components/TicketPrice";
 import AdminRaffleWinnerCard from "../components/RaffleWinner";
