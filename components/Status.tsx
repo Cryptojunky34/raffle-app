@@ -1,4 +1,4 @@
-import { Card, Text } from "@chakra-ui/react";
+mport { Card, Text } from "@chakra-ui/react";
 
 type Props = {
     status: boolean;
