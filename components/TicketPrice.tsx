@@ -1,13 +1,13 @@
 import { Box, Input, Spinner, Stack, Text } from "@chakra-ui/react";
 import { Web3Button, useContract, useContractRead } from "@thirdweb-dev/react";
 import { ethers } from "ethers";
-import { LOTTERY_CONTRACT_ADDRESS } from "../const/addresses";
+import { CONTRACT_ADDRESS } from "../const/addresses";
 import { useState } from "react";
 
 export default function AdminTicketPriceCard() {
     const {
         contract
-    } = useContract(LOTTERY_CONTRACT_ADDRESS);
+    } = useContract(CONTRACT_ADDRESS);
 
     const {
         data: ticketCost,
@@ -40,7 +40,7 @@ export default function AdminTicketPriceCard() {
                 onChange={(e) => setTicketPrice(parseFloat(e.target.value))}
             />
             <Web3Button
-                contractAddress={LOTTERY_CONTRACT_ADDRESS}
+                contractAddress={CONTRACT_ADDRESS}
                 action={(contract) => contract.call(
                     "changeTicketCost",
                     [
