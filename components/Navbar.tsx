@@ -2,6 +2,7 @@ import { Container, Flex, Text } from "@chakra-ui/react";
 import { ConnectWallet, useAddress, useContract, useContractRead } from "@thirdweb-dev/react";
 import Link from "next/link";
 import { CONTRACT_ADDRESS } from "../const/addresses";
+
 export default function Navbar() {
     const address = useAddress();
 
@@ -16,11 +17,11 @@ export default function Navbar() {
 
     return (
         <Container maxW={"1440px"} py={8}>
-            <Flex flexDirection={"row"} justifyContent={"space-between"} alignItems={"center"}>
+            <Flex flexDirection={"row"} justifyContent={"space-between"} alignItems={"right"}>
                 <Link href={"/"}>
-                    <Text fontSize={"xl"} fontWeight={"bold"}>Raffle App</Text>
+                    <Text fontSize={"xl"} fontWeight={"bold"}>DogesLegacy Raffle App</Text>
                 </Link>
-                <Flex flexDirection={"row"} alignItems={"center"}>
+                <Flex flexDirection={"row"} alignItems={"right"}>
                     {!adminLoading && address === admin && (
                         <Link href={"/admin"}>
                             <Text fontWeight={"bold"} mr={10}>Admin</Text>
